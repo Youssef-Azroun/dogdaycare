@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(45deg, blue, red);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  
+  .image-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+  
+    /* Add a white shadow when hovering */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial shadow (transparent white) */
+  }
+  
+  .image-grid img:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White shadow on hover */
+  }
+  
+  
