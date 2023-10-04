@@ -1,25 +1,24 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react"; 
-import './DogDayCare.css'; // Import the CSS file
+// DogDayCare.js
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './DogDayCare.css';
 
 const apiUrl = 'https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683';
 
-const DogDayCare = (props) => {
+const DogDayCare = () => {
+  const [data, setData] = useState([]);
 
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        // Fetch data from the API
-        fetch(apiUrl, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Master-Key': '<https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683>', // Replace with your API key
-          },
-        })
-        .then((response) => response.json())
+  useEffect(() => {
+    fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': '<YOUR_API_KEY>', // Replace with your API key
+      },
+    })
+      .then((response) => response.json())
       .then((result) => {
-        // Extract the 'record' array from the response
+        console.log('API Response:', result);
         const records = result.record;
         setData(records);
       })
@@ -30,13 +29,23 @@ const DogDayCare = (props) => {
 
   return (
     <div>
-      {/* Render the images as a grid */}
       <div className="image-grid">
         {data.map((item, index) => (
-          <img key={index} src={item.img} alt={`Image ${index}`} />
+          <Link
+            key={index}
+            to={{
+              pathname: `/information/${encodeURIComponent(
+                item.img
+              )}/${item.age}/${item.sex}`,
+              state: { details: item },
+            }}
+          >
+            <img src={item.img} alt={`Image ${index}`} />
+          </Link>
         ))}
       </div>
     </div>
   );
 };
+
 export default DogDayCare;
