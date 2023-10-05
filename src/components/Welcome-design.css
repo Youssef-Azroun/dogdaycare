@@ -1,0 +1,47 @@
+/* Welcome-design.css */
+
+/* Styles for the section containing the Welcome message */
+section {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  /* Styles for the Welcome message */
+  h2 {
+    font-size: 36px;
+    color: #0b0a0a;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 20px;
+    color: #242424;
+  }
+  
+  /* Styles for the "Start!" button */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the link */
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
