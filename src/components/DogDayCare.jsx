@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './DogDayCare.css';
 
-const apiUrl = 'https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683';
+const apiUrl = 'https://api.jsonbin.io/v3/b/651ee3cc0574da7622b4d1d3';
 
 const DogDayCare = () => {
   const [data, setData] = useState([]);
@@ -36,7 +36,7 @@ const DogDayCare = () => {
             to={{
               pathname: `/information/${encodeURIComponent(
                 item.img
-              )}/${item.age}/${item.sex}`,
+              )}/${item.age}/${item.sex}/${item.name}/${item.breed}/${item.chipNumber}/${item.owner.name}/${item.owner.lastName}/${item.owner.phoneNumber}`,
               state: { details: item },
             }}
           >
