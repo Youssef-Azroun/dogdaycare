@@ -1,4 +1,4 @@
-// DogDayCare.js
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './DogDayCare.css';
@@ -13,7 +13,7 @@ const DogDayCare = () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'X-Master-Key': '<YOUR_API_KEY>', // Replace with your API key
+        'X-Master-Key': '<YOUR_API_KEY>',
       },
     })
       .then((response) => response.json())

@@ -1,27 +1,39 @@
 body {
-    background: linear-gradient(45deg, blue, red);
+  background: linear-gradient(45deg, blue, red);
+  margin: 0;
+  padding: 0;
 }
 
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  justify-items: center; 
+}
+
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+}
+
+.image-grid img:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+
+@media (max-width: 768px) {
+  .image-grid {
+      grid-template-columns: repeat(3, 1fr); 
   }
-  
-  .image-grid img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
-  
-    /* Add a white shadow when hovering */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial shadow (transparent white) */
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+      grid-template-columns: repeat(2, 1fr);
   }
-  
-  .image-grid img:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White shadow on hover */
-  }
-  
-  
+}

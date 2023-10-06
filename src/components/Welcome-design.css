@@ -1,12 +1,11 @@
-/* Welcome-design.css */
 
-/* Styles for the section containing the Welcome message */
+
 section {
     text-align: center;
     padding: 40px;
   }
   
-  /* Styles for the Welcome message */
+  
   h2 {
     font-size: 36px;
     color: #0b0a0a;
@@ -18,10 +17,10 @@ section {
     color: #242424;
   }
   
-  /* Styles for the "Start!" button */
+  
   button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #eeeff1;
+    color: #474545;
     border: none;
     border-radius: 5px;
     padding: 15px 30px;
@@ -34,7 +33,7 @@ section {
     background-color: #0056b3;
   }
   
-  /* Styles for the link */
+  
   a {
     text-decoration: none;
     color: #007bff;

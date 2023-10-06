@@ -1,7 +1,7 @@
-// Information.js
+
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import './Information-design.css'; // Import your CSS file
+import './Information-design.css'; 
 
 const Information = () => {
   const { img, age, sex, name, breed, chipNumber, ownerName, ownerLast, ownerPhoneNumber } = useParams();
